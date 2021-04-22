@@ -1,0 +1,34 @@
+
+
+.page-header {
+    padding-top: 30px;
+    padding-left: 20px;
+    height: 250px;
+    background-image: url("../image/aksel-fristrup-w7eaCH6ShR4-unsplash.jpg"); /*https://unsplash.com/photos/w7eaCH6ShR4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink*/
+    background-size: cover;
+    background-position: center;
+    background-position: 50% 38%;
+    border-bottom: 5px #64b5f6;
+}
+
+.card {
+    border-radius: 5vw;
+}
+
+.title{
+    color: #64b5f6;
+}
+
+.title h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 4.5vw;
+    margin-top: 0;
+    text-shadow: 0.2vw 0.2vw black;
+}
+
+.title h2 {
+    text-align: center;
+    font-size: 2vw;
+    text-shadow: 0.07vw 0.07vw black;
+}
