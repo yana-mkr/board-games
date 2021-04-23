@@ -1,7 +1,7 @@
 //$('.dropdown-trigger').dropdown();
 
-var pullGames = function () {
-    var apiURL = "https://api.boardgameatlas.com/api/search?name=Clue&client_id=JLBr5npPhV"
+var pullGames = function (search) {
+    var apiURL = "https://api.boardgameatlas.com/api/search?name=" + search + "&client_id=JLBr5npPhV"
 
     fetch(apiURL)
         .then(function (response) {
@@ -10,8 +10,13 @@ var pullGames = function () {
                 response.json().then(function (data) {
                     console.log(data);
                 })
+            } else {
+                alert("Error: " + response.statusText);
             }
+        })
+        .catch(function (error) {
+            alert("Unable to connect");
         });
-}
+};
 
 pullGames()
