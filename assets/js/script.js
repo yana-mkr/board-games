@@ -52,9 +52,12 @@ var pullGames = function () {
                         }
                     }
                 })
+            } else {
+                alert("Error: " + response.statusText);
             }
-
+        })
+        .catch(function (error) {
+            alert("Unable to connect to the server");
         });
-
 }
 pullGames()
