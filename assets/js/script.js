@@ -1,5 +1,6 @@
 //$('.dropdown-trigger').dropdown();
 var youtube = function () {
+    
 
     var apiUrl =
         'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyANhit3zRIVp92To57bvDn81fSUloR_QY4&type=video&q=howtoplay + clue'
