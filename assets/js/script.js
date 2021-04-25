@@ -16,7 +16,6 @@ var pullGames = function () {
 
                     for (var i = 0; i < data.games.length; i++) {
                         if (i < 10) {
-                            // how to limit to 10?
                             var card = document.createElement("div")
                             card.classList.add("card")
                             cardDiv.appendChild(card)
