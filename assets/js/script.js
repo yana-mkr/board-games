@@ -2,6 +2,30 @@ var cardDiv = document.querySelector(".games")
 
 $('.dropdown-trigger').dropdown();
 
+var youtube = function (card, searchTerm) {
+    var apiYoutube =
+        'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAB2XQ98P3h7KXGdn5XV2P09buyExiPDT4&type=video&q=howtoplay%20' + searchTerm
+    //console.log(apiYoutube)
+    return fetch(apiYoutube, {
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    }).then(response => {
+        return response.json()
+    }).then(data => {
+        var videoId = data.items[0].id.videoId
+        var videoUrl = 'https://www.youtube.com/watch?v=' + videoId
+        var ytLink = document.createElement("a")
+        var link2Text = document.createTextNode("Game Tutorial")
+        ytLink.appendChild(link2Text)
+        ytLink.href = videoUrl
+        card.append(ytLink)
+    })
+        .catch(error => {
+            console.log(error);
+        });
+}
+
 var pullGames = function () {
     var apiURL = "https://api.boardgameatlas.com/api/search?name=Clue&client_id=JLBr5npPhV"
 
@@ -44,11 +68,7 @@ var pullGames = function () {
                             buyLink.classList.add("card-content")
                             card.appendChild(buyLink)
 
-                            // var ytLink = document.createElement("a")
-                            // var link2Text = document.createTextNode ("Game Tutorial")
-                            // ytLink.appendChild(link2Text)
-                            // ytLink.href = pull youtube ytLink
-                            // card.append(ytLink)
+                            youtube(card, data.games[i].name)
                         }
                     }
                 })
@@ -58,3 +78,4 @@ var pullGames = function () {
 
 }
 pullGames()
+
