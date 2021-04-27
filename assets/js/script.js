@@ -1,4 +1,5 @@
 var cardDiv = document.querySelector(".games")
+var randomBtn = document.getElementById("random")
 
 $('.dropdown-trigger').dropdown();
 
@@ -22,12 +23,12 @@ var youtube = function (card, searchTerm) {
         card.append(ytLink)
     })
         .catch(error => {
-            console.log(error);
+            console.error(error);
         });
 }
 
-var pullGames = function () {
-    var apiURL = "https://api.boardgameatlas.com/api/search?name=Clue&client_id=JLBr5npPhV"
+var pullGames = function (search) {
+    var apiURL = `https://api.boardgameatlas.com/api/search?${search}&client_id=JLBr5npPhV`
 
     fetch(apiURL)
         .then(function (response) {
@@ -37,45 +38,70 @@ var pullGames = function () {
 
                     console.log(data);
                     //console.log(data.games[0].name)
+                    if (data.count === 0) {
+                        var errorCard = document.createElement("div")
+                        errorCard.classList.add("card")
 
-                    for (var i = 0; i < data.games.length; i++) {
-                        if (i < 10) {
-                            // how to limit to 10?
-                            var card = document.createElement("div")
-                            card.classList.add("card")
-                            cardDiv.appendChild(card)
+                        var img = document.createElement("img")
+                        img.setAttribute("src", "https://images.unsplash.com/photo-1606823616058-541d59dadcb2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80")
+                        img.classList.add("img")
+                        errorCard.appendChild(img)
 
-                            var title = document.createElement("h3")
-                            title.classList.add("card-content")
-                            title.textContent = data.games[i].name
-                            card.appendChild(title)
+                        var errorMsg = document.createElement("h3")
+                        errorMsg.textContent = "There has been an error, please try your search again!"
+                        errorCard.appendChild(errorMsg)
 
-                            var img = document.createElement("img")
-                            img.setAttribute("src", data.games[i].thumb_url)
-                            img.classList.add("img")
-                            card.append(img)
+                        cardDiv.appendChild(errorCard)
 
-                            var price = document.createElement("p")
-                            price.classList.add("card-content")
-                            price.textContent = "$" + data.games[i].price
-                            card.appendChild(price)
+                    } else {
 
-                            // https://stackoverflow.com/questions/4772774/how-do-i-create-a-link-using-javascript
-                            var buyLink = document.createElement("a")
-                            var link1Text = document.createTextNode("Buy Here")
-                            buyLink.appendChild(link1Text)
-                            buyLink.href = data.games[i].url
-                            buyLink.classList.add("card-content")
-                            card.appendChild(buyLink)
+                        for (var i = 0; i < data.games.length; i++) {
+                            if (i < 10) {
+                                // how to limit to 10?
+                                var card = document.createElement("div")
+                                card.classList.add("card")
+                                cardDiv.appendChild(card)
 
-                            youtube(card, data.games[i].name)
+                                var title = document.createElement("h3")
+                                title.classList.add("card-content")
+                                title.textContent = data.games[i].name
+                                card.appendChild(title)
+
+                                var img = document.createElement("img")
+                                img.setAttribute("src", data.games[i].thumb_url)
+                                img.classList.add("img")
+                                card.append(img)
+
+                                var price = document.createElement("p")
+                                price.classList.add("card-content")
+                                price.textContent = "$" + data.games[i].price
+                                card.appendChild(price)
+
+                                // https://stackoverflow.com/questions/4772774/how-do-i-create-a-link-using-javascript
+                                var buyLink = document.createElement("a")
+                                var link1Text = document.createTextNode("Buy Here")
+                                buyLink.appendChild(link1Text)
+                                buyLink.href = data.games[i].url
+                                buyLink.classList.add("card-content")
+                                card.appendChild(buyLink)
+
+                                youtube(card, data.games[i].name)
+                            }
                         }
                     }
                 })
             }
 
+        })
+        .catch(error => {
+            console.error(error);
         });
-
 }
-pullGames()
+
+randomBtn.addEventListener("click", function () {
+    var search = "name="
+    pullGames(search)
+})
+
+//pullGames()
 
