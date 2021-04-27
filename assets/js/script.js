@@ -5,8 +5,8 @@ $('.dropdown-trigger').dropdown();
 
 var youtube = function (card, searchTerm) {
     var apiYoutube =
-        'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAB2XQ98P3h7KXGdn5XV2P09buyExiPDT4&type=video&q=howtoplay%20' + searchTerm
-    //console.log(apiYoutube)
+        'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyDpwZByw81ieT46AfPAcdvjm6QawvtBKY0&type=video&q=howtoplay%20' + searchTerm
+    console.log(apiYoutube)
     return fetch(apiYoutube, {
         headers: {
             'Content-Type': 'application/json'
