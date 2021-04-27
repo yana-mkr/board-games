@@ -101,6 +101,8 @@ var pullGames = function (search) {
 randomBtn.addEventListener("click", function () {
     var search = "name="
     pullGames(search)
+    var disp = document.querySelector(".gameDisp");
+    disp.classList.add("gameDispTwo");
 })
 
 //pullGames()
