@@ -2,23 +2,6 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel = "stylesheet"
-    href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
- <script type = "text/javascript"
-    src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
- <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
- </script>       
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>BoardGameGenerator</title>
-=======
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Document</title>
->>>>>>> main
 
 </head>
 
@@ -58,31 +40,47 @@
             12-columns-wide on small screens  -->
             <h2> What games are you looking for?  </h2>
               <!-- Dropdown Trigger -->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Age</a>
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>min age</a>
 
   <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">3-5yrs</a></li>
-    <li><a href="#!">5-10</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+    <li><a class="min-age" value="6" href="#!">6 yrs</a></li>
+    <li><a class="min-age" value="8" href="#!">8 yrs</a></li>
+    <li><a class="min-age" value ="10" href="#!">10 yrs and above</a></li>   
   </ul>
 
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Max play time</a>
 
   <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+  <ul id='dropdown2' class='dropdown-content'>
+    <li><a class="max-play-time" value="30" href="#!">30 min </a></li>
+    <li><a class="max-play-time" value="60" href="#!">60 min </a></li>
+    <li><a class="max-play-time" value="90"href="#!">90 min</a></li>
+    <li><a class="max-play-time" value="120"href="#!">120 min</a></li>
   </ul>
-
+        
         </div>
+        <div class="col s12 m4 l3">
+            <!-- Note that "m4 l3" was added -->
+            <!-- Grey navigation panel
+                      This content will be:
+                  3-columns-wide on large screens,
+                  4-columns-wide on medium screens,
+                  12-columns-wide on small screens  -->
+            <!-- <h2> Side </h2> -->
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Number of players</a>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown3' class='dropdown-content'>
+              <li><a class="number-of-players" value="1" href="#!">1</a></li>
+              <li><a class="number-of-players" value="2" href="#!">2</a></li>
+              <li><a class="number-of-players" value="3" href="#!">3</a></li>
+              <li><a class="number-of-players" value="4" href="#!">4</a></li>
+              <li><a class="number-of-players" value="5" href="#!">5</a></li>
+              <li><a class="number-of-players" value="6" href="#!">6</a></li>
+            </ul>
+            <button id="random">Random</button>
+          </div>
         <!-- Main Section for to populate game cards -->
         <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
           <!-- Teal page content

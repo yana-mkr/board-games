@@ -1,6 +1,11 @@
 var cardDiv = document.querySelector(".games")
 var randomBtn = document.getElementById("random")
 
+var minAge = document.querySelector("min-age")
+var minPlayers = document.querySelector("min-players")
+var maxPlaytime = document.querySelector("max-play-time")
+
+
 $('.dropdown-trigger').dropdown();
 
 var youtube = function (card, searchTerm) {
@@ -37,7 +42,8 @@ var pullGames = function (search) {
                 response.json().then(function (data) {
 
                     console.log(data);
-                    //console.log(data.games[0].name)
+                    // console.log(data).
+                    console.log(data.games[0].name,"min age:" +data.games[0].min_age,"max playtime:" +data.games[0].max_playtime,"min players:" +data.games[0].min_players)
                     if (data.count === 0) {
                         var errorCard = document.createElement("div")
                         errorCard.classList.add("card")
