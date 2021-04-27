@@ -15,7 +15,7 @@
  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
  </script>       
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Document</title>
+    <title>BoardGameGenerator</title>
 
 </head>
 
@@ -41,8 +41,20 @@
             3-columns-wide on large screens,
             4-columns-wide on medium screens,
             12-columns-wide on small screens  -->
-            <h2> Side </h2>
+            <h2> What games are you looking for?  </h2>
               <!-- Dropdown Trigger -->
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Age</a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">3-5yrs</a></li>
+    <li><a href="#!">5-10</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">three</a></li>
+    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+  </ul>
+
   <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
 
   <!-- Dropdown Structure -->
@@ -54,6 +66,7 @@
     <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
     <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
   </ul>
+
         </div>
         <!-- Main Section for to populate game cards -->
         <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
