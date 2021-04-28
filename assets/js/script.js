@@ -105,4 +105,5 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
 }
 
 searchBtn.addEventListener("click", function () {
-    pullGames(10, 4, 30)
+    pullGames(8, 4, 60)
+})
