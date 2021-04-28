@@ -1,9 +1,9 @@
 var cardDiv = document.querySelector(".games")
 var searchBtn = document.getElementById("search")
 
-var minAge = document.querySelector("min-age")
-var minPlayers = document.querySelector("min-players")
-var maxPlayTime = document.querySelector("max-play-time")
+var minAge = document.querySelector(".min-age")
+var minPlayers = document.querySelector(".min-players")
+var maxPlayTime = document.querySelector(".max-play-time")
 
 
 $('.dropdown-trigger').dropdown();
@@ -42,8 +42,8 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
                 response.json().then(function (data) {
 
                     console.log(data);
-                    // console.log(data).
                     console.log(data.games[0].name, "min age:" + data.games[0].min_age, "max playtime:" + data.games[0].max_playtime, "min players:" + data.games[0].min_players)
+
                     if (data.count === 0) {
                         var errorCard = document.createElement("div")
                         errorCard.classList.add("card")
@@ -62,8 +62,8 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
                     } else {
 
                         for (var i = 0; i < data.games.length; i++) {
-                            if (i < 10) {
-                                // how to limit to 10?
+                            if (i < 10 && data.games[i].price != "0.00") {
+
                                 var card = document.createElement("div")
                                 card.classList.add("card")
                                 cardDiv.appendChild(card)
@@ -105,5 +105,5 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
 }
 
 searchBtn.addEventListener("click", function () {
-    pullGames(8, 4, 60)
+    pullGames(6, 2, 30)
 })
