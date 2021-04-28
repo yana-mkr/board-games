@@ -1,9 +1,9 @@
 var cardDiv = document.querySelector(".games")
 var randomBtn = document.getElementById("random")
 
-var minAge = document.querySelector("min-age")
-var minPlayers = document.querySelector("min-players")
-var maxPlayTime = document.querySelector("max-play-time")
+var minAge = document.querySelector(".min-age")
+var minPlayers = document.querySelector(".min-players")
+var maxPlayTime = document.querySelector(".max-play-time")
 
 
 $('.dropdown-trigger').dropdown();
@@ -107,6 +107,9 @@ var pullGames = function (search) {
 
 
 function gameSearch (minAge, minPlayers, maxPlayTime){
+    // minAge=minAge.value
+    // minPlayers=minPlayers.value
+    // maxPlayTime=maxPlayTime.value
     var baseUrl = `https://api.boardgameatlas.com/api/search?order_by=popularity&min_players=${minPlayers}&max_playtime=${maxPlayTime}&min_age=${minAge}&client_id=JLBr5npPhV`
 
     fetch(baseUrl)
@@ -115,6 +118,7 @@ function gameSearch (minAge, minPlayers, maxPlayTime){
             console.log(response);
             response.json().then(function (data) {
                 console.log(data)
+                console.log(parseInt(minAge))
 
             })
 }})}
@@ -123,6 +127,9 @@ randomBtn.addEventListener("click", function () {
     var search = "name="
     pullGames(search)
 })
-gameSearch (10,4,30)
+gameSearch ()
+console.log (minAge)
+console.log (minPlayers)
+console.log (maxPlayTime)
 //pullGames()
 

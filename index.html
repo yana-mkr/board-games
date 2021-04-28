@@ -39,20 +39,25 @@
             4-columns-wide on medium screens,
             12-columns-wide on small screens  -->
             <h2> What games are you looking for?  </h2>
+
+
+
+
+
               <!-- Dropdown Trigger -->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>min age</a>
+              <div class="input-field col s12">
+                <select>
+                  <option value="" disabled selected>Select an age</option>
+                  <option value="4">4 yrs</option>
+                  <option value="6">6</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                </select>
+                <label>Age Selection</label>
+              </div>
 
   <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a class="min-age" value="6" href="#!">6 yrs</a></li>
-    <li><a class="min-age" value="8" href="#!">8 yrs</a></li>
-    <li><a class="min-age" value ="10" href="#!">10 yrs and above</a></li>   
-  </ul>
-
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Max play time</a>
-
-  <!-- Dropdown Structure -->
-  <ul id='dropdown2' class='dropdown-content'>
+  <!-- <ul id='dropdown2' class='dropdown-content'>
     <li><a class="max-play-time" value="30" href="#!">30 min </a></li>
     <li><a class="max-play-time" value="60" href="#!">60 min </a></li>
     <li><a class="max-play-time" value="90"href="#!">90 min</a></li>
@@ -60,7 +65,7 @@
   </ul>
         
         </div>
-        <div class="col s12 m4 l3">
+        <div class="col s12 m4 l3"> -->
             <!-- Note that "m4 l3" was added -->
             <!-- Grey navigation panel
                       This content will be:
@@ -69,18 +74,7 @@
                   12-columns-wide on small screens  -->
             <!-- <h2> Side </h2> -->
             <!-- Dropdown Trigger -->
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Number of players</a>
-            <!-- Dropdown Structure -->
-            <ul id='dropdown3' class='dropdown-content'>
-              <li><a class="number-of-players" value="1" href="#!">1</a></li>
-              <li><a class="number-of-players" value="2" href="#!">2</a></li>
-              <li><a class="number-of-players" value="3" href="#!">3</a></li>
-              <li><a class="number-of-players" value="4" href="#!">4</a></li>
-              <li><a class="number-of-players" value="5" href="#!">5</a></li>
-              <li><a class="number-of-players" value="6" href="#!">6</a></li>
-            </ul>
-            <button id="random">Random</button>
-          </div>
+           
         <!-- Main Section for to populate game cards -->
         <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
           <!-- Teal page content
