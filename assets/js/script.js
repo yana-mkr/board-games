@@ -62,7 +62,7 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
                     } else {
 
                         for (var i = 0; i < data.games.length; i++) {
-                            if (i < 10 && data.games[i].price != "0.00") {
+                            if (i < 10) {
 
                                 var card = document.createElement("div")
                                 card.classList.add("card")
@@ -105,5 +105,5 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
 }
 
 searchBtn.addEventListener("click", function () {
-    pullGames(6, 2, 30)
+    pullGames(6, 2, 120)
 })
