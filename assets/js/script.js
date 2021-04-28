@@ -1,5 +1,5 @@
 var cardDiv = document.querySelector(".games")
-var randomBtn = document.getElementById("random")
+var searchBtn = document.getElementById("search")
 
 var minAge = document.querySelector("min-age")
 var minPlayers = document.querySelector("min-players")
@@ -32,8 +32,8 @@ var youtube = function (card, searchTerm) {
         });
 }
 // create function for API call based on age, time, players.
-var pullGames = function (search) {
-    var apiURL = `https://api.boardgameatlas.com/api/search?${search}&client_id=JLBr5npPhV`
+var pullGames = function (minAge, minPlayers, maxPlayTime) {
+    var apiURL = `https://api.boardgameatlas.com/api/search?order_by=popularity&min_players=${minPlayers}&max_playtime=${maxPlayTime}&min_age=${minAge}&client_id=JLBr5npPhV`
 
     fetch(apiURL)
         .then(function (response) {
@@ -43,7 +43,7 @@ var pullGames = function (search) {
 
                     console.log(data);
                     // console.log(data).
-                    console.log(data.games[0].name,"min age:" +data.games[0].min_age,"max playtime:" +data.games[0].max_playtime,"min players:" +data.games[0].min_players)
+                    console.log(data.games[0].name, "min age:" + data.games[0].min_age, "max playtime:" + data.games[0].max_playtime, "min players:" + data.games[0].min_players)
                     if (data.count === 0) {
                         var errorCard = document.createElement("div")
                         errorCard.classList.add("card")
@@ -104,25 +104,8 @@ var pullGames = function (search) {
         });
 }
 
-
-
-function gameSearch (minAge, minPlayers, maxPlayTime){
-    var baseUrl = `https://api.boardgameatlas.com/api/search?order_by=popularity&min_players=${minPlayers}&max_playtime=${maxPlayTime}&min_age=${minAge}&client_id=JLBr5npPhV`
-
-    fetch(baseUrl)
-    .then(function (response) {
-        if (response.ok) {
-            console.log(response);
-            response.json().then(function (data) {
-                console.log(data)
-
-            })
-}})}
-
-randomBtn.addEventListener("click", function () {
-    var search = "name="
-    pullGames(search)
+searchBtn.addEventListener("click", function () {
+    pullGames(10, 4, 30)
 })
-gameSearch (10,4,30)
-//pullGames()
+
 
