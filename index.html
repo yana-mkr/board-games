@@ -8,23 +8,23 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Document</title>
+  <title>New Fav Games</title>
 
 </head>
 
 <body>
   <nav class="page-header">
     <div class="row">
-      <div class="col s12 m6">
+      <!-- <div class="col s12 m6">
         <div class="card cardTitle white darken-1">
-          <div class="card-content">
-            <span class="card-title title">
+          <div class="card-content"> -->
+            <span class="title">
               <h1>Board Games</h1>
               <h2>Find your new favorite board game.</h2>
             </span>
-          </div>
+          <!-- </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </nav>
 
@@ -38,9 +38,11 @@
             3-columns-wide on large screens,
             4-columns-wide on medium screens,
             12-columns-wide on small screens  -->
-      <h2> What games are you looking for? </h2>
-      <!-- Dropdown Trigger -->
-      <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>min age</a>
+
+         <div class="side-style">
+        <h4 class="side-header"> What games are you looking for?</h4>
+              <!-- Dropdown Trigger -->
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>min age</a>
 
       <!-- Dropdown Structure -->
       <ul id='dropdown1' class='dropdown-content'>
@@ -67,34 +69,42 @@
                   3-columns-wide on large screens,
                   4-columns-wide on medium screens,
                   12-columns-wide on small screens  -->
-      <!-- <h2> Side </h2> -->
-      <!-- Dropdown Trigger -->
-      <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Number of players</a>
-      <!-- Dropdown Structure -->
-      <ul id='dropdown3' class='dropdown-content'>
-        <li><a class="number-of-players" value="1" href="#!">1</a></li>
-        <li><a class="number-of-players" value="2" href="#!">2</a></li>
-        <li><a class="number-of-players" value="3" href="#!">3</a></li>
-        <li><a class="number-of-players" value="4" href="#!">4</a></li>
-        <li><a class="number-of-players" value="5" href="#!">5</a></li>
-        <li><a class="number-of-players" value="6" href="#!">6</a></li>
-      </ul>
-      <button id="search">Search</button>
+
+            <!-- <h2> Side </h2> -->
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Number of players</a>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown3' class='dropdown-content'>
+              <li><a class="number-of-players" value="1" href="#!">1</a></li>
+              <li><a class="number-of-players" value="2" href="#!">2</a></li>
+              <li><a class="number-of-players" value="3" href="#!">3</a></li>
+              <li><a class="number-of-players" value="4" href="#!">4</a></li>
+              <li><a class="number-of-players" value="5" href="#!">5</a></li>
+              <li><a class="number-of-players" value="6" href="#!">6</a></li>
+            </ul>
+            <button id="search">Search</button>
+          </div>
+        <section class="searchHis side-style">
+        <h4 class="side-header">Search History</h4>
+        
+      </section>
     </div>
-    <!-- Main Section for to populate game cards -->
-    <div class="col s12 m8 l9">
-      <!-- Note that "m8 l9" was added -->
-      <!-- Teal page content
+        <!-- Main Section for to populate game cards -->
+        <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+          <!-- Teal page content
   
                 This content will be:
             9-columns-wide on large screens,
             8-columns-wide on medium screens,
             12-columns-wide on small screens  -->
-      <h2>Main section to populate game cards</h2>
-      <div class="row">
-        <div class="col s12 m4 l5">
-          <div class="game-section">
-            <div class="games">
+
+        <h2 class="game-title">Search Results</h2>
+        <div class="row gameDisp">
+          <div class="col s12 m4 l5">
+            <div class="game-section">
+              <div class="games">
+              </div>
+
             </div>
           </div>
         </div>
