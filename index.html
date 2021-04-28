@@ -15,108 +15,67 @@
 <body>
   <nav class="page-header">
     <div class="row">
-      <!-- <div class="col s12 m6">
-        <div class="card cardTitle white darken-1">
-          <div class="card-content"> -->
-            <span class="title">
-              <h1>Board Games</h1>
-              <h2>Find your new favorite board game.</h2>
-            </span>
-          <!-- </div>
-        </div>
-      </div> -->
+      <span class="title">
+        <h1>Board Games</h1>
+          <h2>Find your new favorite board game.</h2>
+        </span>
     </div>
   </nav>
 
   <!-- Page Layout here -->
   <div class="row">
-    <!-- Side NAV -->
-    <div class=>
-      <!-- Note that "m4 l3" was added -->
-      <!-- Grey navigation panel
-                This content will be:
-            3-columns-wide on large screens,
-            4-columns-wide on medium screens,
-            12-columns-wide on small screens  -->
-
-         <div class="side-style">
+    <div class="col s12 m8 l3">
+      <div class="side-style">
         <h4 class="side-header"> What games are you looking for?</h4>
-              <!-- Dropdown Trigger -->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>min age</a>
-
-      <!-- Dropdown Structure -->
-      <ul id='dropdown1' class='dropdown-content'>
-        <li><a class="min-age" value="6" href="#!">6 yrs</a></li>
-        <li><a class="min-age" value="8" href="#!">8 yrs</a></li>
-        <li><a class="min-age" value="10" href="#!">10 yrs and above</a></li>
-      </ul>
-
-      <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Max play time</a>
-
-      <!-- Dropdown Structure -->
-      <ul id='dropdown2' class='dropdown-content'>
-        <li><a class="max-play-time" value="30" href="#!">30 min </a></li>
-        <li><a class="max-play-time" value="60" href="#!">60 min </a></li>
-        <li><a class="max-play-time" value="90" href="#!">90 min</a></li>
-        <li><a class="max-play-time" value="120" href="#!">120 min</a></li>
-      </ul>
-
-    </div>
-    <div class="col s12 m4 l3">
-      <!-- Note that "m4 l3" was added -->
-      <!-- Grey navigation panel
-                      This content will be:
-                  3-columns-wide on large screens,
-                  4-columns-wide on medium screens,
-                  12-columns-wide on small screens  -->
-
-            <!-- <h2> Side </h2> -->
             <!-- Dropdown Trigger -->
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Number of players</a>
-            <!-- Dropdown Structure -->
-            <ul id='dropdown3' class='dropdown-content'>
-              <li><a class="number-of-players" value="1" href="#!">1</a></li>
-              <li><a class="number-of-players" value="2" href="#!">2</a></li>
-              <li><a class="number-of-players" value="3" href="#!">3</a></li>
-              <li><a class="number-of-players" value="4" href="#!">4</a></li>
-              <li><a class="number-of-players" value="5" href="#!">5</a></li>
-              <li><a class="number-of-players" value="6" href="#!">6</a></li>
-            </ul>
-            <button id="search">Search</button>
-          </div>
-        <section class="searchHis side-style">
+        <div class="dropDisp">
+          <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>min age</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a class="min-age" value="6" href="#!">6 yrs</a></li>
+            <li><a class="min-age" value="8" href="#!">8 yrs</a></li>
+            <li><a class="min-age" value="10" href="#!">10 yrs and above</a></li>
+          </ul>
+          <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Max play time</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown2' class='dropdown-content'>
+            <li><a class="max-play-time" value="30" href="#!">30 min </a></li>
+            <li><a class="max-play-time" value="60" href="#!">60 min </a></li>
+            <li><a class="max-play-time" value="90" href="#!">90 min</a></li>
+            <li><a class="max-play-time" value="120" href="#!">120 min</a></li>
+          </ul>
+          <!-- Dropdown Trigger -->
+          <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Number of players</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown3' class='dropdown-content'>
+            <li><a class="number-of-players" value="1" href="#!">1</a></li>
+            <li><a class="number-of-players" value="2" href="#!">2</a></li>
+            <li><a class="number-of-players" value="3" href="#!">3</a></li>
+            <li><a class="number-of-players" value="4" href="#!">4</a></li>
+            <li><a class="number-of-players" value="5" href="#!">5</a></li>
+            <li><a class="number-of-players" value="6" href="#!">6</a></li>
+          </ul>
+          <button id="search">Search</button>
+        </div>
+      </div>
+      <section class="searchHis side-style">
         <h4 class="side-header">Search History</h4>
-        
       </section>
     </div>
-        <!-- Main Section for to populate game cards -->
-        <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
-          <!-- Teal page content
-  
-                This content will be:
-            9-columns-wide on large screens,
-            8-columns-wide on medium screens,
-            12-columns-wide on small screens  -->
-
+      <!-- Main Section for to populate game cards -->
+      <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
         <h2 class="game-title">Search Results</h2>
         <div class="row gameDisp">
           <div class="col s12 m4 l5">
             <div class="game-section">
               <div class="games">
               </div>
-
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!--Need to inmport materializ CDN  -->
-    <!-- Need to add Header -->
-    <!--Possible side menu  -->
-    <!-- Cards that rendure form API -->
-
-
+  </div>
     <!-- <script>$(document).ready(function(){
         $('.dropdown-trigger').dropdown();
      });</script> -->
