@@ -122,6 +122,8 @@ function gameSearch (minAge, minPlayers, maxPlayTime){
 randomBtn.addEventListener("click", function () {
     var search = "name="
     pullGames(search)
+    var disp = document.querySelector(".gameDisp");
+    disp.classList.add("gameDispTwo");
 })
 gameSearch (10,4,30)
 //pullGames()
