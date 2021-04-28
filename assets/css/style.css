@@ -1,4 +1,6 @@
-
+body{
+    background-color: #5EA4BF;
+}
 
 .page-header {
     padding-top: 30px;
@@ -11,26 +13,58 @@
     border-bottom: 5px #64b5f6;
 }
 
-.cardTitle {
-    border-radius: 5vw;
-}
-
 .title{
-    color: #64b5f6;
+    color: White;
 }
 
 .title h1 {
     font-weight: bold;
     text-align: center;
-    font-size: 4.5vw;
+    font-size: 80px;
     margin-top: 0;
-    text-shadow: 0.2vw 0.2vw black;
+    text-shadow: 0.3vw 0.3vw black;
 }
 
 .title h2 {
     text-align: center;
-    font-size: 2vw;
-    text-shadow: 0.07vw 0.07vw black;
+    font-size: 30px;
+    text-shadow: 0.08vw 0.08vw black;
+}
+
+.side-style {
+    background-color: #e9f3f7;
+    margin-top: 15px;
+    border-radius: 1vw;
+}
+
+.side-header {
+    text-align: center;
+    font-weight: bolder;
+    border-bottom-style: solid;
+    border-width: 2px;
+    
+}
+.game-title {
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px black;
+}
+.gameDisp {
+    background-color: #e9f3f7;
+    height: 100vw;
+    border-radius: 2vw;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #234025;
+}
+
+.gameDispTwo {
+    background-color: #e9f3f7;
+    height: fit-content;
+    border-radius: 2vw;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #234025;
 }
 
 .card {
