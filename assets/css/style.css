@@ -41,8 +41,11 @@ body{
     text-align: center;
     font-weight: bolder;
     border-bottom-style: solid;
-    border-width: 2px;
-    
+    border-width: 2px;  
+}
+.dropDisp {
+    display: flex;
+    flex-direction: column;
 }
 .game-title {
     font-weight: bold;
@@ -92,6 +95,9 @@ body{
     align-items: center;
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> main
