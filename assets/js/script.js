@@ -1,9 +1,9 @@
 var cardDiv = document.querySelector(".games")
 var searchBtn = document.getElementById("search")
 
-var minAge = document.querySelector(".min-age")
-var minPlayers = document.querySelector(".min-players")
-var maxPlayTime = document.querySelector(".max-play-time")
+var ageSelect = parseInt(document.querySelector("#age-select").value)
+var playerSelect = parseInt(document.querySelector("#player-select").value)
+var timeSelect = parseInt(document.querySelector("#time-select").value)
 
 
 // $('.dropdown-trigger').dropdown();
@@ -109,11 +109,9 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
 
 
 
-function gameSearch (minAge, minPlayers, maxPlayTime){
-    // minAge=minAge.value
-    // minPlayers=minPlayers.value
-    // maxPlayTime=maxPlayTime.value
-    var baseUrl = `https://api.boardgameatlas.com/api/search?order_by=popularity&min_players=${minPlayers}&max_playtime=${maxPlayTime}&min_age=${minAge}&client_id=JLBr5npPhV`
+function gameSearch (ageSelect, playerSelect, timeSelect){
+    // e.preventDefault()
+    var baseUrl = `https://api.boardgameatlas.com/api/search?order_by=popularity&min_players=${playerSelect}&max_playtime=${timeSelect}&min_age=${ageSelect}&client_id=JLBr5npPhV`
 
     fetch(baseUrl)
     .then(function (response) {
@@ -121,19 +119,22 @@ function gameSearch (minAge, minPlayers, maxPlayTime){
             console.log(response);
             response.json().then(function (data) {
                 console.log(data)
-                console.log(parseInt(minAge))
+                console.log(ageSelect,playerSelect,timeSelect)
 
             })
 }})}
+console.log(ageSelect,playerSelect,timeSelect)
 
-randomBtn.addEventListener("click", function () {
-    var search = "name="
-    pullGames(search)
-})
-gameSearch ()
-console.log (minAge)
-console.log (minPlayers)
-console.log (maxPlayTime)
+gameSearch (ageSelect,playerSelect,timeSelect)
+
+// randomBtn.addEventListener("click", function () {
+//     var search = "name="
+//     pullGames(search)
+// })
+// gameSearch ()
+// console.log (minAge)
+// console.log (minPlayers)
+// console.log (maxPlayTime)
 //pullGames()
 
 searchBtn.addEventListener("click", function () {
