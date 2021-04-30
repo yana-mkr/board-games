@@ -24,46 +24,95 @@
 
   <!-- Page Layout here -->
   <div class="row">
-    <div class="col s12 m8 l3">
-      <div class="side-style">
-        <h4 class="side-header"> What games are you looking for?</h4>
+    <!-- Side NAV -->
+    <div class=>
+      <!-- Note that "m4 l3" was added -->
+      <!-- Grey navigation panel
+                This content will be:
+            3-columns-wide on large screens,
+            4-columns-wide on medium screens,
+            12-columns-wide on small screens  -->
+            <h2> What games are you looking for?  </h2>
+
+            <form id="submit-form"> 
+    
+            
+
             <!-- Dropdown Trigger -->
-        <div class="dropDisp">
-          <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>min age</a>
-          <!-- Dropdown Structure -->
-          <ul id='dropdown1' class='dropdown-content'>
-            <li><a class="min-age" value="6" href="#!">6 yrs</a></li>
-            <li><a class="min-age" value="8" href="#!">8 yrs</a></li>
-            <li><a class="min-age" value="10" href="#!">10 yrs and above</a></li>
-          </ul>
-          <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Max play time</a>
-          <!-- Dropdown Structure -->
-          <ul id='dropdown2' class='dropdown-content'>
-            <li><a class="max-play-time" value="30" href="#!">30 min </a></li>
-            <li><a class="max-play-time" value="60" href="#!">60 min </a></li>
-            <li><a class="max-play-time" value="90" href="#!">90 min</a></li>
-            <li><a class="max-play-time" value="120" href="#!">120 min</a></li>
-          </ul>
-          <!-- Dropdown Trigger -->
-          <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Number of players</a>
-          <!-- Dropdown Structure -->
-          <ul id='dropdown3' class='dropdown-content'>
-            <li><a class="number-of-players" value="1" href="#!">1</a></li>
-            <li><a class="number-of-players" value="2" href="#!">2</a></li>
-            <li><a class="number-of-players" value="3" href="#!">3</a></li>
-            <li><a class="number-of-players" value="4" href="#!">4</a></li>
-            <li><a class="number-of-players" value="5" href="#!">5</a></li>
-            <li><a class="number-of-players" value="6" href="#!">6</a></li>
-          </ul>
-          <button id="search">Search</button>
+              <div class="input-field col s12">
+                <h4>Age Selection</h4>
+                <select id ="age-select">
+                  <option value="" disabled selected>Select an age</option>
+                  <option value="4" selected="selected" >4 yrs</option>
+                  <option value="6">6 yrs</option>
+                  <option value="8">8 yrs</option>
+                  <option value="10">10 yrs</option>
+                </select>
+               
+              </div>
+
+              <div class="input-field col s12">
+                <h4>Player Selection</h4l>
+                <select id ="player-select">
+                  <option value="" disabled selected>How Many Players</option>
+                  <option value="2">2</option>
+                  <option value="4"selected="selected">4</option>
+                  <option value="6">6</option>
+                  <option value="8">8</option>
+                </select>
+               
+              </div>
+
+              <div class="input-field col s12">
+                <h4>Game Paytime</h4>
+                <select id ="time-select">
+                  <option value="" disabled selected>Max Play Time</option>
+                  <option value="30">30min</option>
+                  <option value="60"selected="selected">60min</option>
+                  <option value="90">90min</option>
+                  <option value="120">120min</option>
+                </select>
+
+              </form>
+                
+
+                <button type="submit" form="submit-form">Search</button>
+                <section class="searchHis side-style">
+                  <h4 class="side-header">Search History</h4>
+                </section>
+              </div>
+              
+              
+
+  <!-- Dropdown Structure -->
+  <!-- <ul id='dropdown2' class='dropdown-content'>
+    <li><a class="max-play-time" value="30" href="#!">30 min </a></li>
+    <li><a class="max-play-time" value="60" href="#!">60 min </a></li>
+    <li><a class="max-play-time" value="90"href="#!">90 min</a></li>
+    <li><a class="max-play-time" value="120"href="#!">120 min</a></li>
+  </ul>
+        
         </div>
-      </div>
-      <section class="searchHis side-style">
-        <h4 class="side-header">Search History</h4>
-      </section>
-    </div>
-      <!-- Main Section for to populate game cards -->
-      <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+        <div class="col s12 m4 l3"> -->
+            <!-- Note that "m4 l3" was added -->
+            <!-- Grey navigation panel
+                      This content will be:
+                  3-columns-wide on large screens,
+                  4-columns-wide on medium screens,
+                  12-columns-wide on small screens  -->
+
+            <!-- <h2> Side </h2> -->
+            <!-- Dropdown Trigger -->
+           
+        <!-- Main Section for to populate game cards -->
+        <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+          <!-- Teal page content
+  
+                This content will be:
+            9-columns-wide on large screens,
+            8-columns-wide on medium screens,
+            12-columns-wide on small screens  -->
+
         <h2 class="game-title">Search Results</h2>
         <div class="row gameDisp">
           <div class="col s12 m4 l5">

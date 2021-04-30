@@ -1,12 +1,15 @@
 var cardDiv = document.querySelector(".games")
 var searchBtn = document.getElementById("search")
 
-var minAge = document.querySelector("min-age")
-var minPlayers = document.querySelector("min-players")
-var maxPlayTime = document.querySelector("max-play-time")
+var ageSelect = parseInt(document.querySelector("#age-select").value)
+var playerSelect = parseInt(document.querySelector("#player-select").value)
+var timeSelect = parseInt(document.querySelector("#time-select").value)
 
 
-$('.dropdown-trigger').dropdown();
+// $('.dropdown-trigger').dropdown();
+$(document).ready(function(){
+    $('select').formSelect();
+  });
 
 var youtube = function (card, searchTerm) {
     var apiYoutube =
@@ -103,6 +106,36 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
             console.error(error);
         });
 }
+
+
+
+function gameSearch (ageSelect, playerSelect, timeSelect){
+    // e.preventDefault()
+    var baseUrl = `https://api.boardgameatlas.com/api/search?order_by=popularity&min_players=${playerSelect}&max_playtime=${timeSelect}&min_age=${ageSelect}&client_id=JLBr5npPhV`
+
+    fetch(baseUrl)
+    .then(function (response) {
+        if (response.ok) {
+            console.log(response);
+            response.json().then(function (data) {
+                console.log(data)
+                console.log(ageSelect,playerSelect,timeSelect)
+
+            })
+}})}
+console.log(ageSelect,playerSelect,timeSelect)
+
+gameSearch (ageSelect,playerSelect,timeSelect)
+
+// randomBtn.addEventListener("click", function () {
+//     var search = "name="
+//     pullGames(search)
+// })
+// gameSearch ()
+// console.log (minAge)
+// console.log (minPlayers)
+// console.log (maxPlayTime)
+//pullGames()
 
 searchBtn.addEventListener("click", function () {
     pullGames(10, 4, 30)
