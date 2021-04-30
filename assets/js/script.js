@@ -1,5 +1,6 @@
 var cardDiv = document.querySelector(".games")
 var randomBtn = document.getElementById("random")
+var resetBtn = document.getElementById("reset")
 
 $('.dropdown-trigger').dropdown();
 
@@ -91,7 +92,6 @@ var pullGames = function (search) {
                     }
                 })
             }
-
         })
         .catch(error => {
             console.error(error);
@@ -101,6 +101,10 @@ var pullGames = function (search) {
 randomBtn.addEventListener("click", function () {
     var search = "name="
     pullGames(search)
+})
+
+resetBtn.addEventListener('click', function () {
+    cardDiv.innerHTML = "";
 })
 
 //pullGames()
