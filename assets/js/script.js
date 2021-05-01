@@ -109,7 +109,16 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
 //                 console.log(data)
 //             })
 // }})}
-
+function searchHistory(age, player, time,){
+    var savedParameters = JSON.parse(window.localStorage.getItem("savedParameters")) || []
+    var savedUserChoice = {
+        age: age,
+        player: player,
+        time: time,
+    }
+   savedParameters.push(savedUserChoice)
+   localStorage.setItem("savedParameters",JSON.stringify(savedParameters))
+   }
 
 submitForm.addEventListener("submit", function (event) {
     event.preventDefault();
