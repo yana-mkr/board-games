@@ -28,6 +28,8 @@ var youtube = function (card, searchTerm) {
             console.error(error);
         });
 }
+
+
 // create function for API call based on age, time, players.
 var pullGames = function (minAge, minPlayers, maxPlayTime) {
     var apiURL = `https://api.boardgameatlas.com/api/search?order_by=popularity&min_players=${minPlayers}&max_playtime=${maxPlayTime}&min_age=${minAge}&client_id=JLBr5npPhV`;
@@ -108,6 +110,7 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
 //             })
 // }})}
 
+
 submitForm.addEventListener("submit", function (event) {
     event.preventDefault();
     let cards = document.querySelectorAll('.card')
@@ -121,7 +124,8 @@ submitForm.addEventListener("submit", function (event) {
     console.log(age, player, time)
     // gameSearch(age,player, time);
     pullGames(age, player, time);
-    
+    searchHistory(age, player, time)
+
     var change = document.querySelector(".gameDisp");
     change.classList.add("gameDispTwo");
 });
