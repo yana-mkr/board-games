@@ -44,6 +44,16 @@ body{
     border-width: 2px;  
     font-size: 4vw;
 }
+
+#saved-searches h5 {
+    font-size: 20px;
+    color: #5EA4BF;
+}
+
+#saved-searches {
+    text-align: center;
+}
+
 .dropDisp {
     display: flex;
     flex-direction: column;

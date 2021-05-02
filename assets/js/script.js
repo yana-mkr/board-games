@@ -4,11 +4,15 @@ var searchBtn = document.getElementById("search")
 var submitForm = document.getElementById("submit-form")
 var savedSearches = document.querySelector("#saved-searches")
 
-
+//upon loading the page
 $(document).ready(function () {
     $('select').formSelect();
+    savedSearches.innerHTML = ""
+    var savedParameters = JSON.parse(window.localStorage.getItem("savedParameters")) || []
+    populateHistory(savedParameters)
 });
 
+//youtube api pull
 var youtube = function (card, searchTerm) {
 
     var apiYoutube = 'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAB2XQ98P3h7KXGdn5XV2P09buyExiPDT4&type=video&q=howtoplay%20' + searchTerm;
@@ -103,11 +107,12 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
         });
 }
 
-
+//reset button
 resetBtn.addEventListener('click', function () {
     cardDiv.innerHTML = "";
 })
 
+// search history
 function searchHistory(age, player, time,) {
     var savedParameters = JSON.parse(window.localStorage.getItem("savedParameters")) || []
     var savedUserChoice = {
@@ -118,22 +123,19 @@ function searchHistory(age, player, time,) {
 
     savedParameters.push(savedUserChoice)
     localStorage.setItem("savedParameters", JSON.stringify(savedParameters))
-
-    var makeList = function (searched) {
-        var listItem = document.createElement("li")
-        listItem.textContent = searched
-        savedSearched.append(listItem)
-    }
-
+    savedSearches.innerHTML = ""
+    populateHistory(savedParameters)
+}
+// appending search history
+function populateHistory(savedParameters) {
     for (var i = 0; i < savedParameters.length; i++) {
-        makeList(savedParameters[i])
-
-        var listItem = document.createElement("li")
-        listItem.textContent = savedParameters
-        savedSearches.appendChild("listItem")
+        var listItem = document.createElement("h5")
+        listItem.textContent = "Age: " + savedParameters[i].age + ", Player: " + savedParameters[i].player + ", Time: " + savedParameters[i].time
+        savedSearches.appendChild(listItem)
     }
 }
 
+//drop downs for search
 submitForm.addEventListener("submit", function (event) {
     event.preventDefault();
     let cards = document.querySelectorAll('.card')
