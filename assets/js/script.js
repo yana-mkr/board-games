@@ -1,4 +1,5 @@
 var cardDiv = document.querySelector(".games")
+var resetBtn = document.getElementById("reset")
 var searchBtn = document.getElementById("search")
 var submitForm = document.getElementById("submit-form")
 
@@ -7,7 +8,9 @@ $(document).ready(function(){
   });
 
 var youtube = function (card, searchTerm) {
+
     var apiYoutube ='https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAB2XQ98P3h7KXGdn5XV2P09buyExiPDT4&type=video&q=howtoplay%20' + searchTerm;
+
     return fetch(apiYoutube, {
         headers: {
             'Content-Type': 'application/json'
@@ -97,6 +100,13 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
             console.error(error);
         });
 }
+
+
+resetBtn.addEventListener('click', function () {
+    cardDiv.innerHTML = "";
+})
+
+//pullGames()
 
 // function gameSearch (ageSelect, playerSelect, timeSelect){
 //     var baseUrl = `https://api.boardgameatlas.com/api/search?order_by=popularity&min_players=${playerSelect}&max_playtime=${timeSelect}&min_age=${ageSelect}&client_id=JLBr5npPhV`;
