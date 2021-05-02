@@ -59,10 +59,9 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
                             img.classList.add("img")
                             errorCard.appendChild(img)
 
-                            var errorMsg = document.createElement("h3")
+                            var errorMsg = document.createElement("p")
                             errorMsg.textContent = "There has been an error, please try your search again!"
                             errorCard.appendChild(errorMsg)
-
                             cardDiv.appendChild(errorCard)
 
                         } else {

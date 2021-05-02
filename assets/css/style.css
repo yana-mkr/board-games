@@ -41,8 +41,18 @@ body{
     text-align: center;
     font-weight: bolder;
     border-bottom-style: solid;
-    border-width: 2px;  
+    border-width: 2px;
     font-size: 4vw;
+    color: white;
+    text-shadow: 2px 2px 13px black;
+}
+
+.dropTitle {
+    font-size: 4vw;
+    color: white;
+    text-shadow: 2px 2px 13px black;
+    text-align: center;
+    font-weight: bolder;
 }
 
 #saved-searches h5 {
@@ -131,7 +141,7 @@ body{
 
 .card p {
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     color:brown;
 }
 
@@ -143,6 +153,11 @@ body{
 .img {
     width: 100%;
     align-items: center;
+    height: 188px;
+}
+
+.error {
+    font-size: 2vw;
 }
 
 
