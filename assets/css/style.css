@@ -1,4 +1,6 @@
-
+body{
+    background-color: #5EA4BF;
+}
 
 .page-header {
     padding-top: 30px;
@@ -11,35 +13,110 @@
     border-bottom: 5px #64b5f6;
 }
 
-.cardTitle {
-    border-radius: 5vw;
+.titleTop{
+    color: White;
 }
 
-.title{
-    color: #64b5f6;
-}
-
-.title h1 {
+.titleTop h1 {
     font-weight: bold;
     text-align: center;
-    font-size: 4.5vw;
+    font-size: 80px;
     margin-top: 0;
-    text-shadow: 0.2vw 0.2vw black;
+    text-shadow: 0.3vw 0.3vw black;
 }
 
-.title h2 {
+.titleTop h2 {
     text-align: center;
-    font-size: 2vw;
-    text-shadow: 0.07vw 0.07vw black;
+    font-size: 30px;
+    text-shadow: 0.08vw 0.08vw black;
+}
+
+.side-style {
+    background-color: #e9f3f7;
+    margin-top: 15px;
+    border-radius: 1vw;
+}
+
+.side-header {
+    text-align: center;
+    font-weight: bolder;
+    border-bottom-style: solid;
+    border-width: 2px;  
+    font-size: 4vw;
+}
+.dropDisp {
+    display: flex;
+    flex-direction: column;
+}
+
+.gameBtn {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    color: white;
+    background-color: lightblue;
+    border-radius: 5px;
+    margin: 10px 0px 10px;
+}
+
+.dropTitle {
+    font-size: 3vw;
+}
+
+.game-title {
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px black;
+}
+.gameDisp {
+    background-color: #e9f3f7;
+    height: 100vw;
+    border-radius: 2vw;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #234025;
+}
+
+.gameDispTwo {
+    background-color: #e9f3f7;
+    height: fit-content;
+    border-radius: 2vw;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #234025;
+}
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
     border: 3px solid #64b5f6;
     border-radius: 10px;
+    width: 200px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
 }
 
-.card h3 {
+.card .card-content {
+    padding: 0;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    height: 100px;
     text-align: center;
+    font-size: 21px;
+    color: black;
+    margin: 10px;
 }
 
 .card p {
@@ -56,4 +133,17 @@
 .img {
     width: 100%;
     align-items: center;
+}
+
+
+@media screen and (max-width:535px)  {
+    .page-header{
+        height: 300px; 
+    }
+}
+
+@media screen and (max-width:535px)  {
+    .page-header{
+        height: 320px; 
+    }
 }
