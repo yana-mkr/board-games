@@ -2,6 +2,8 @@ var cardDiv = document.querySelector(".games")
 var resetBtn = document.getElementById("reset")
 var searchBtn = document.getElementById("search")
 var submitForm = document.getElementById("submit-form")
+var savedSearches = document.querySelector("#saved-searches")
+
 
 $(document).ready(function () {
     $('select').formSelect();
@@ -16,7 +18,7 @@ var youtube = function (card, searchTerm) {
             'Content-Type': 'application/json'
         },
     }).then(response => {
-        console.log(response)
+        //console.log(response)
         return response.json()
     }).then(data => {
         console.log(data);
@@ -39,11 +41,11 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
     fetch(apiURL)
         .then(function (response) {
             if (response.ok) {
-                console.log(response);
+                //console.log(response);
                 response.json()
                     .then(function (data) {
-                        console.log(data);
-                        console.log(data.games[0].name, "min age:" + data.games[0].min_age, "max playtime:" + data.games[0].max_playtime, "min players:" + data.games[0].min_players)
+                        //console.log(data);
+                        //console.log(data.games[0].name, "min age:" + data.games[0].min_age, "max playtime:" + data.games[0].max_playtime, "min players:" + data.games[0].min_players)
                         if (data.count === 0) {
                             var errorCard = document.createElement("div")
                             errorCard.classList.add("card")
@@ -97,7 +99,7 @@ var pullGames = function (minAge, minPlayers, maxPlayTime) {
             }
         })
         .catch(error => {
-            console.error(error);
+            // console.error(error);
         });
 }
 
@@ -108,7 +110,6 @@ resetBtn.addEventListener('click', function () {
 
 function searchHistory(age, player, time,) {
     var savedParameters = JSON.parse(window.localStorage.getItem("savedParameters")) || []
-    var savedSearches = document.querySelector("#saved-searches")
     var savedUserChoice = {
         age: age,
         player: player,
@@ -117,10 +118,21 @@ function searchHistory(age, player, time,) {
 
     savedParameters.push(savedUserChoice)
     localStorage.setItem("savedParameters", JSON.stringify(savedParameters))
-    savedSearches.appendChild("savedUserChoice")
+
+    var makeList = function (searched) {
+        var listItem = document.createElement("li")
+        listItem.textContent = searched
+        savedSearched.append(listItem)
+    }
+
+    for (var i = 0; i < savedParameters.length; i++) {
+        makeList(savedParameters[i])
+
+        var listItem = document.createElement("li")
+        listItem.textContent = savedParameters
+        savedSearches.appendChild("listItem")
+    }
 }
-
-
 
 submitForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -128,11 +140,11 @@ submitForm.addEventListener("submit", function (event) {
     for (let i = 0; i < cards.length; i++) {
         cards[i].replaceWith('');
     };
-    console.log(event)
+    //console.log(event)
     let age = event.target[1].value;
     let player = event.target[3].value;
     let time = event.target[5].value;
-    console.log(age, player, time)
+    //console.log(age, player, time)
     // gameSearch(age,player, time);
     pullGames(age, player, time);
     searchHistory(age, player, time)
