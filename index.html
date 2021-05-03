@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -30,6 +31,7 @@
       <div class="side-style">
         <h2 class="side-header"> What games are you looking for? </h2>
         <form id="submit-form">
+
           <!-- Dropdown Trigger -->
           <div class="input-field col s12">
 
@@ -62,23 +64,24 @@
               <option value="120">120 min</option>
             </select>
           </div>
+
+          <!-- submit button -->
           <button class="gameBtn" type="submit" form="submit-form">Search</button>
         </form>
+
+        <!-- rest button -->
         <button class="gameBtn" id="reset">Reset</button>
       </div>
+
+      <!-- search history -->
       <section class="searchHis side-style">
         <h4 class="side-header">Search History</h4>
+        <div id="saved-searches"></div>
       </section>
     </div>
-    <div class="col s12 m8 l9">
-      <!-- Note that "m8 l9" was added -->
-      <!-- Teal page content
-  
-                This content will be:
-            9-columns-wide on large screens,
-            8-columns-wide on medium screens,
-            12-columns-wide on small screens  -->
 
+    <div class="col s12 m8 l9">
+      <!-- Teal page content -->
       <h2 class="game-title">Search Results</h2>
       <div class="gameDisp">
         <div class="game-section">
@@ -89,13 +92,9 @@
     </div>
   </div>
   </div>
-  <!-- <script>$(document).ready(function(){
-        $('.dropdown-trigger').dropdown();
-     });</script> -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="assets/js/script.js"></script>
-
 
 </body>
 
