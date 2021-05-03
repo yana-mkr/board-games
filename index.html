@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -17,8 +18,8 @@
     <div class="row">
       <span class="titleTop">
         <h1>Board Games</h1>
-          <h2>Find your new favorite board game.</h2>
-        </span>
+        <h2>Find your new favorite board game.</h2>
+      </span>
     </div>
   </nav>
 
@@ -28,13 +29,14 @@
 
     <div class="col s12 m8 l3">
       <div class="side-style">
-        <h2 class="side-header"> What games are you looking for?  </h2>
-        <form id="submit-form"> 
-        <!-- Dropdown Trigger -->
+        <h2 class="side-header"> What games are you looking for? </h2>
+        <form id="submit-form">
+
+          <!-- Dropdown Trigger -->
           <div class="input-field col s12">
 
             <h4 class="dropTitle">Age Selection</h4>
-            <select name="age" id ="age-select">
+            <select name="age" id="age-select">
               <option value="" disabled selected>Select an age</option>
               <option value="4">4 yrs</option>
               <option value="6">6 yrs</option>
@@ -44,7 +46,7 @@
           </div>
           <div class="input-field col s12">
             <h4 class="dropTitle">Player Selection</h4>
-            <select name="player" id ="player-select">
+            <select name="player" id="player-select">
               <option value="" disabled selected>How Many Players</option>
               <option value="2">2</option>
               <option value="4">4</option>
@@ -54,47 +56,45 @@
           </div>
           <div class="input-field col s12">
             <h4 class="dropTitle">Game Playtime</h4>
-            <select name="time" id ="time-select">
-              <option value="" disabled selected>Pick your time</option>
+            <select name="time" id="time-select">
+              <option value="" disabled selected>Max Play Time</option>
               <option value="30">30 min</option>
               <option value="60">60 min</option>
               <option value="90">90 min</option>
               <option value="120">120 min</option>
             </select>
           </div>
+
+          <!-- submit button -->
           <button class="gameBtn" type="submit" form="submit-form">Search</button>
         </form>
-           <button id="reset">Reset</button>
+
+        <!-- rest button -->
+        <button class="gameBtn" id="reset">Reset</button>
       </div>
+
+      <!-- search history -->
       <section class="searchHis side-style">
         <h4 class="side-header">Search History</h4>
-      </section>    
+        <div id="saved-searches"></div>
+      </section>
     </div>
-    <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
-          <!-- Teal page content
-  
-                This content will be:
-            9-columns-wide on large screens,
-            8-columns-wide on medium screens,
-            12-columns-wide on small screens  -->
 
-        <h2 class="game-title">Search Results</h2>
-        <div class="gameDisp">
-          <div class="game-section">
-            <div class="games">
-            </div>
+    <div class="col s12 m8 l9">
+      <!-- Teal page content -->
+      <h2 class="game-title">Search Results</h2>
+      <div class="gameDisp">
+        <div class="game-section">
+          <div class="games">
           </div>
         </div>
       </div>
     </div>
   </div>
-    <!-- <script>$(document).ready(function(){
-        $('.dropdown-trigger').dropdown();
-     });</script> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/js/script.js"></script>
-
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 
