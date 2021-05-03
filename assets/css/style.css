@@ -23,6 +23,7 @@ body{
     font-size: 80px;
     margin-top: 0;
     text-shadow: 0.3vw 0.3vw black;
+    
 }
 
 .titleTop h2 {
@@ -35,6 +36,7 @@ body{
     background-color: #e9f3f7;
     margin-top: 15px;
     border-radius: 1vw;
+    /* box-shadow: 5px 10px 15px black; */
 }
 
 .side-header {
@@ -97,6 +99,7 @@ body{
     border-style: solid;
     border-width: 5px;
     border-color: #234025;
+    /* box-shadow: 5px 10px 15px black; */
 }
 
 .gameDispTwo {
