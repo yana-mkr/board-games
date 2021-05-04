@@ -15,7 +15,7 @@ $(document).ready(function () {
 //youtube api pull
 var youtube = function (card, searchTerm) {
 
-    var apiYoutube = 'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAPQfbo6HoH8Rlg-oJeLcvaV_voW7jMzIg&type=video&q=howtoplay%20' + searchTerm;
+    var apiYoutube = 'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyD-JanMPj9JRaFf4mxUdXJ7EChwgqoL84w&type=video&q=howtoplay%20' + searchTerm;
 
     return fetch(apiYoutube, {
         headers: {
